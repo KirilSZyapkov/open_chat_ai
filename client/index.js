@@ -1,3 +1,6 @@
+import bot from "./assets/bot.svg";
+import user from "./assets/user.svg";
+
 const form = document.querySelector("form");
 const content = document.querySelector(".content");
 
@@ -31,9 +34,9 @@ function generateUniqueId() {
 function chatMessage(isAi, value, id) {
   return `
       <div class="content-container ${isAi ? "bot" : "user"}">
-        <img calss="content-img" src="./public/${
-          isAi ? "bot.svg" : "user.svg"
-        }" />
+        <img calss="content-img" src=${
+          isAi ? bot : user
+        } />
         <div class="content-text" id=${id}>
           ${value}         
         </div>
