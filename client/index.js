@@ -31,7 +31,7 @@ function generateUniqueId() {
 function chatMessage(isAi, value, id) {
   return `
       <div class="content-container ${isAi ? "bot" : "user"}">
-        <img calss="content-img" src="./assets/${
+        <img calss="content-img" src="./public/${
           isAi ? "bot.svg" : "user.svg"
         }" />
         <div class="content-text" id=${id}>
