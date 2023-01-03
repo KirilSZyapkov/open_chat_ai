@@ -1,0 +1,148 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+body {
+  background-color: hsl(0, 5%, 12%);
+}
+
+#app {
+  background-color: hsl(251, 62%, 36%);
+  width: 800px;
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.content {
+  overflow: auto;
+
+  margin-bottom: 0.6em;
+}
+
+.content-container {
+  display: flex;
+}
+
+.content-text {
+  margin-left: 0.65em;
+  font-size: large;
+  padding: 0.5em;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.user {
+  background-color: hsl(300, 3%, 30%);
+}
+
+.bot {
+  background-color: hsl(300, 4%, 15%);
+  color: hsl(300, 3%, 70%);
+}
+
+.content-container img {
+  height: 30px;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  /* background-color: rgb(79, 24, 233); */
+}
+
+.form-group {
+  padding: 0.7em;
+  display: flex;
+  gap: 10px;
+}
+
+#text {
+  flex-grow: 1;
+  padding: 0.3em;
+}
+
+.sub-button {
+  width: 30px;
+  border: none;
+  outline: none;
+  border-radius: 15%;
+}
+
+.loader {
+  border: 5px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 5px solid #3498db;
+  width: 25px;
+  height: 25px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
