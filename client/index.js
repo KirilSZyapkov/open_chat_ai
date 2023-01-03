@@ -59,7 +59,7 @@ async function handleSubmit(e) {
 
   loader(messageDiv, true);
 
-  const respons = await fetch("http://localhost:5000", {
+  const respons = await fetch("https://open-chat-ai.onrender.com", {
     method: "POST",
     headers: {
       "Conten-Type": "application/json",
